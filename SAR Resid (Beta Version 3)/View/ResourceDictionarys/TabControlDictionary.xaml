@@ -1,0 +1,183 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks">
+
+    <Style x:Key="FocusVisual">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle Margin="2" StrokeDashArray="1 2" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" SnapsToDevicePixels="true" StrokeThickness="1"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Start Template-->
+    <Style x:Key="TabItemsStyle" TargetType="TabItem">
+        <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Background" Value="{DynamicResource TabItemBackground(Default)}"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="FontSize" Value="12.5"/>
+        <Setter Property="Foreground" Value="{DynamicResource TabItemForground(Default)}"/>
+        <Setter Property="Margin" Value="0 0 5 0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+                    <Border Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" Margin="{TemplateBinding Margin}" SnapsToDevicePixels="True" CornerRadius="6">
+                        <ContentPresenter ContentSource="Header" Content="{TemplateBinding Header}" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True" SnapsToDevicePixels="True"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource TabItemBackground(MouseOver)}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TabItemForground(MouseOver)}"/>
+                        </Trigger>
+                        <Trigger Property="Selector.IsSelected" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource TabItemBackground(Selected)}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TabItemForground(Selected)}"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Selector.IsSelected" Value="True"/>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{DynamicResource TabItemBackground(Selected)}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource TabItemForground(Selected)}"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="TabControlItemContainerStyle" TargetType="{x:Type TabItem}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+        <Setter Property="Foreground" Value="#000000"/>
+        <Setter Property="Background" Value="#8FFFFFFF"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
+        <Setter Property="Padding" Value="0"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Height" Value="40"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+        <Setter Property="FontSize" Value="13.8"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabItem}">
+
+                    <Border x:Name="mainBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" CornerRadius="20" Grid.Column="1">
+                        <ContentPresenter x:Name="contentPresenter" ContentSource="Header" Focusable="False" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="Selector.IsSelected" Value="True">
+                            <Setter Property="Background" Value="#22156e"/>
+                            <Setter Property="Foreground" Value="#FFFFFF"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter Property="Background" Value="#88000000"/>
+                            <Setter Property="Foreground" Value="#FFFFFF"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                                <Condition Property="Selector.IsSelected" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <MultiTrigger.Setters>
+                                <Setter Property="Cursor" Value="Hand"/>
+                                <Setter Property="Background" Value="#22156e"/>
+                                <Setter Property="Foreground" Value="#FFFFFF"/>
+                            </MultiTrigger.Setters>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="TabControlStyle" TargetType="{x:Type TabControl}">
+        <Setter Property="Background" Value="{DynamicResource MenuBTNBackgroundColor(Default)}"/>
+        <Setter Property="Foreground" Value="{DynamicResource MenuBTNForground(Default)}"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="180"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="Padding" Value="10 10 0 0"/>
+        <Setter Property="Margin" Value="24 25 0 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="true" CornerRadius="15">
+                        <Grid>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <icons:PackIconMaterial x:Name="ico" Kind="Home" Height="26" Width="22" Margin="{TemplateBinding Padding}" Visibility="Collapsed"/>
+                                <icons:PackIconModern x:Name="ico2" Kind="CalendarDollar" Height="26" Width="22" Margin="{TemplateBinding Padding}" Visibility="Collapsed"/>
+                                <icons:PackIconMaterialDesign x:Name="ico3" Kind="Work" Height="26" Width="22" Margin="{TemplateBinding Padding}" Visibility="Collapsed"/>
+                                <Label Content="{TemplateBinding Content}" Margin="30 0 0 0" FontFamily="Segoe UI Semibold" Foreground="{TemplateBinding Foreground}" VerticalAlignment="Center"/>
+                            </StackPanel>
+                            <ContentPresenter x:Name="contentPresenter" Content="" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True"  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="#20FFFFFF"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource MenuBTNBackgroundColor(MouseOver)}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Foreground" Value="#FFFFFFFF"/>
+                            <Setter Property="Background" TargetName="border" Value="#50FFFFFF"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="DimGray"/>
+                            <Setter Property="BorderBrush" TargetName="border" Value="DimGray"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="DimGray"/>
+                        </Trigger>
+                        <Trigger Property="Content" Value="Home">
+                            <Setter Property="Visibility" TargetName="ico" Value="Visible"/>
+                            <Setter Property="Visibility" TargetName="ico2" Value="Collapsed"/>
+                            <Setter Property="Visibility" TargetName="ico3" Value="Collapsed"/>
+                            <Setter Property="Kind" TargetName="ico" Value="Home"/>
+                        </Trigger>
+                        <Trigger Property="Content" Value="Customers">
+                            <Setter Property="Visibility" TargetName="ico" Value="Visible"/>
+                            <Setter Property="Visibility" TargetName="ico2" Value="Collapsed"/>
+                            <Setter Property="Visibility" TargetName="ico3" Value="Collapsed"/>
+                            <Setter Property="Kind" TargetName="ico" Value="AccountGroup"/>
+                        </Trigger>
+                        <Trigger Property="Content" Value="Bills">
+                            <Setter Property="Visibility" TargetName="ico" Value="Collapsed"/>
+                            <Setter Property="Visibility" TargetName="ico2" Value="Visible"/>
+                            <Setter Property="Visibility" TargetName="ico3" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="Content" Value="WorkSheets">
+                            <Setter Property="Visibility" TargetName="ico" Value="Collapsed"/>
+                            <Setter Property="Visibility" TargetName="ico2" Value="Collapsed"/>
+                            <Setter Property="Visibility" TargetName="ico3" Value="Visible"/>
+                            <Setter Property="Kind" TargetName="ico3" Value="Work"/>
+                        </Trigger>
+                        <Trigger Property="Content" Value="Settings">
+                            <Setter Property="Visibility" TargetName="ico" Value="Collapsed"/>
+                            <Setter Property="Visibility" TargetName="ico2" Value="Collapsed"/>
+                            <Setter Property="Visibility" TargetName="ico3" Value="Visible"/>
+                            <Setter Property="Kind" TargetName="ico3" Value="Settings"/>
+                        </Trigger>
+                        <Trigger Property="Selector.IsSelected" Value="True">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource MenuBTNBackgroundColor(Selected)}"/>
+                            <Setter Property="Foreground" Value="#FFFFFF"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+    <!--End Template-->
+</ResourceDictionary>

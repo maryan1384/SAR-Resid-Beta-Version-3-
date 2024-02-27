@@ -1,0 +1,56 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="ApplicationBackgroundColor" Color="#89CFF3"/>
+    <SolidColorBrush x:Key="MenuBTNBackgroundColor(Default)" Color="#20FFFFFF"/>
+    <SolidColorBrush x:Key="MenuBTNBackgroundColor(Selected)" Color="#2AA6E8"/>
+    <SolidColorBrush x:Key="MenuBTNBackgroundColor(MouseOver)" Color="#40FFFFFF"/>
+    <SolidColorBrush x:Key="MenuBTNForground(Default)" Color="#000000"/>
+    <SolidColorBrush x:Key="MenuBTNForground(Selected)" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="MenuBTNForground(MouseOver)" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="RibbonBTNBackgroundColor(Default)" Color="#00000000"/>
+    <SolidColorBrush x:Key="RibbonBTNBackgroundColor(Selected)" Color="#000000"/>
+    <SolidColorBrush x:Key="RibbonBTNBackgroundColor(MouseOver)" Color="#90000000"/>
+    <SolidColorBrush x:Key="RibbonBTNForground(Default)" Color="#000000"/>
+    <SolidColorBrush x:Key="RibbonBTNForground(Selected)" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="RibbonBTNForground(MouseOver)" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="CCColor" Color="#AFFFFFFF"/>
+    <SolidColorBrush x:Key="BoxColor" Color="#8C32343C"/>
+    <SolidColorBrush x:Key="BoxForground" Color="#000000"/>
+    <SolidColorBrush x:Key="TabItemBackground(Default)" Color="#5C000000"/>
+    <SolidColorBrush x:Key="TabItemBackground(MouseOver)" Color="#9C000000"/>
+    <SolidColorBrush x:Key="TabItemBackground(Selected)" Color="#FF348EF6"/>
+    <SolidColorBrush x:Key="TabItemForground(Default)" Color="#000000"/>
+    <SolidColorBrush x:Key="TabItemForground(MouseOver)" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="TabItemForground(Selected)" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="BillBoxForeground(Default)" Color="#000000"/>
+    <SolidColorBrush x:Key="BillBoxBackground(Default)" Color="#20000000"/>
+    <SolidColorBrush x:Key="BillBoxBackground(MouseOver)" Color="#141E6D"/>
+    <SolidColorBrush x:Key="ChangeBoxStyle(Defualt)" Color="#5A000000"/>
+    <SolidColorBrush x:Key="SettingsMenuBTNBackgroundColor(Default)" Color="#20000000"/>
+    <SolidColorBrush x:Key="SettingsMenuBTNBackgroundColor(Selected)" Color="#60000000"/>
+    <SolidColorBrush x:Key="SettingsMenuBTNBackgroundColor(MouseOver)" Color="#40000000"/>
+    <SolidColorBrush x:Key="SettingsMenuBTNForground(Default)" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="SettingsMenuBTNForground(Selected)" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="SettingsMenuBTNForground(MouseOver)" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="DetailBTN(BDR)" Color="#5AFFFFFF"/>
+    <SolidColorBrush x:Key="DetailBTN(SBDR)" Color="#3A000000"/>
+    <SolidColorBrush x:Key="DetailTopBDR" Color="#5AFFFFFF"/>
+    <SolidColorBrush x:Key="DetailCenterBDR" Color="#6AFFFFFF"/>
+    <SolidColorBrush x:Key="DetailButtomBDR" Color="#5A000000"/>
+    <LinearGradientBrush x:Key="DetailWindow" StartPoint="0 0" EndPoint="0 1">
+        <GradientStop Color="#F089CFF3" Offset="0.003"/>
+        <GradientStop Color="#FA89CFF3" Offset="0.3"/>
+        <GradientStop Color="#FA89CFF3" Offset="0.4"/>
+        <GradientStop Color="#FA89CFF3" Offset="0.5"/>
+        <GradientStop Color="#FA89CFF3" Offset="0.6"/>
+        <GradientStop Color="#F089CFF3" Offset="0.999"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="AddBillWindow" StartPoint="0 0" EndPoint="0 1">
+        <GradientStop Color="#F089CFF3" Offset="0.003"/>
+        <GradientStop Color="#FA89CFF3" Offset="0.3"/>
+        <GradientStop Color="#FA89CFF3" Offset="0.4"/>
+        <GradientStop Color="#FA89CFF3" Offset="0.5"/>
+        <GradientStop Color="#FA89CFF3" Offset="0.6"/>
+        <GradientStop Color="#F089CFF3" Offset="0.999"/>
+    </LinearGradientBrush>
+</ResourceDictionary>

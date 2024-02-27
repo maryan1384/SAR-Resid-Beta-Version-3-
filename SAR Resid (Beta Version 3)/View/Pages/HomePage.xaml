@@ -1,0 +1,198 @@
+﻿<Page x:Class="SAR_Resid__Beta_Version_3_.View.Pages.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SAR_Resid__Beta_Version_3_.View.Pages"
+      xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="800"
+      Title="HomePage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="17"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="17"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="17"/>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="1" Grid.Column="1" Style="{DynamicResource ScrollViewerStyle(Default)}">
+            <Grid Margin="8" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="5"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="5"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Column="1" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#5BFFFFFF" CornerRadius="25" Margin="0 0 5 5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Vertical" Margin="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1" >
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Header)}" Foreground="{DynamicResource BoxForground}" Text="News" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0"/>
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Detail)}" Text="1. New User InterFace" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"/>
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Detail)}" Text="2. Auto Fill Bills" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"/>
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Detail)}" Text="3. Application Bugs Fixed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"/>
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Detail)}" Text="4. New Bill Tools" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"/>
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Detail)}" Text="5. New Application Tools" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#5BFFFFFF" CornerRadius="25" Margin="5 0 5 5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Vertical" Margin="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Grid.Column="1" Grid.Row="1" >
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Header)}" Foreground="{DynamicResource BoxForground}" Text="Recent Activitys" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0"/>
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Detail)}" Text="1. Not Found" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"/>
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Detail)}" Text="2. Not Found" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"/>
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Detail)}" Text="3. Not Found" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"/>
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Detail)}" Text="4. Not Found" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"/>
+                            <TextBlock Style="{DynamicResource TextBlockStyle(Detail)}" Text="5. Not Found" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0 5 0 0"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="5" Grid.Row="1" Grid.RowSpan="2" Grid.ColumnSpan="3" Background="#5BFFFFFF" CornerRadius="25" Margin="5 0 0 5">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="25"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="25"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+                        <Grid Grid.Column="1" Grid.Row="1">
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                                <TextBlock Style="{DynamicResource TextBlockStyle(Header)}" Foreground="{DynamicResource BoxForground}" Text="Welcome" Margin="0"/>
+                                <TextBlock x:Name="TXBDate" Style="{DynamicResource TextBlockStyle(Detail)}" Foreground="{DynamicResource BoxForground}" Text="Date" Margin="0 25 0 0"/>
+                                <TextBlock x:Name="TXBTime" Style="{DynamicResource TextBlockStyle(Detail)}" Foreground="{DynamicResource BoxForground}" Text="Time" Margin="0 10 0 0"/>
+                            </StackPanel>
+                        </Grid>
+                    </Grid>
+                </Border>
+                <Grid Grid.Column="1" Grid.Row="3" Grid.RowSpan="2" Grid.ColumnSpan="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Grid.Column="0" Background="#5BFFFFFF" CornerRadius="25" Margin="0 5 5 5" Width="80">
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="0 6.5 0 10.5">
+                                <Button Style="{DynamicResource ToolBTNStyle(Account)}"/>
+                                <Button Style="{DynamicResource ToolBTNStyle(Terminal)}"/>
+                                <Button Style="{DynamicResource ToolBTNStyle(Calculatore)}"/>
+                                <Button Style="{DynamicResource ToolBTNStyle(WebSite)}"/>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Border>
+                    <Border Grid.Column="1" Background="#5BFFFFFF" CornerRadius="25" Margin="5 5 5 5">
+                        <TextBlock Style="{DynamicResource TextBlockStyle(Header)}" Text="Chart Not Found" Foreground="{DynamicResource BoxForground}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </Grid>
+                <Border Grid.Column="5" Grid.Row="3" Grid.RowSpan="3" Grid.ColumnSpan="3" Background="#5BFFFFFF" CornerRadius="25" Margin="5 5 0 0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="7"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="5"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="25"/>
+                        </Grid.RowDefinitions>
+                        <Border Background="#8E000000" Grid.Row="1" Grid.Column="1" CornerRadius="25 25 5 5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Margin="0 5 0 0">
+                            <Grid>
+                                <Label Content="Notifications" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF" FontFamily="Segoe UI Semibold" FontSize="14"/>
+                            </Grid>
+                        </Border>
+                        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1">
+                            <Border Background="#5E000000" Grid.Row="1" Grid.Column="1" CornerRadius="10 10 10 10" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="60" Margin="0 5 0 0">
+                                <Grid>
+                                    <Label Content="Notification" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF" FontFamily="Segoe UI Semibold" FontSize="14"/>
+                                </Grid>
+                            </Border>
+                            <Border Background="#5E000000" Grid.Row="1" Grid.Column="1" CornerRadius="10 10 10 10" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="60" Margin="0 5 0 0">
+                                <Grid>
+                                    <Label Content="Notification" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF" FontFamily="Segoe UI Semibold" FontSize="14"/>
+                                </Grid>
+                            </Border>
+                            <Border Background="#5E000000" Grid.Row="1" Grid.Column="1" CornerRadius="10 10 10 10" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="60" Margin="0 5 0 0">
+                                <Grid>
+                                    <Label Content="Notification" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF" FontFamily="Segoe UI Semibold" FontSize="14"/>
+                                </Grid>
+                            </Border>
+                            <Border Background="#5E000000" Grid.Row="1" Grid.Column="1" CornerRadius="10 10 10 10" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="60" Margin="0 5 0 0">
+                                <Grid>
+                                    <Label Content="Notification" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF" FontFamily="Segoe UI Semibold" FontSize="14"/>
+                                </Grid>
+                            </Border>
+                            <Border Background="#5E000000" Grid.Row="1" Grid.Column="1" CornerRadius="10 10 10 10" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="60" Margin="0 5 0 0">
+                                <Grid>
+                                    <Label Content="Notification" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="#FFF" FontFamily="Segoe UI Semibold" FontSize="14"/>
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="5" Grid.RowSpan="1" Grid.ColumnSpan="4" Background="#5BFFFFFF" CornerRadius="25" Margin="0 5 5 0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="10"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="10"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="10"/>
+                        </Grid.RowDefinitions>
+                        <Label Content="Add Your" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Segoe UI Semibold" FontSize="25" FontWeight="SemiBold" Foreground="{DynamicResource BoxForground}" Opacity="0.6" Grid.Row="1" Grid.Column="1" Margin="10 0 0 0"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Stretch" Height="160" Margin="4" Grid.Row="1" Grid.Column="1">
+                            <Button Style="{DynamicResource AddButtonBoxStyle}" Content="Customers" IsEnabled="True"/>
+                            <Button Style="{DynamicResource AddButtonBoxStyle}" Content="Bills"/>
+                            <Button Style="{DynamicResource AddButtonBoxStyle}" Content="WorkSheets"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>

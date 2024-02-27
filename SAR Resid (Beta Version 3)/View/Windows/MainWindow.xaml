@@ -1,0 +1,87 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SAR_Resid__Beta_Version_3_.View.Windows"
+        xmlns:UC="clr-namespace:SAR_Resid__Beta_Version_3_.UserControls"
+        xmlns:icons="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:CustomeControls="clr-namespace:SAR_Resid__Beta_Version_3_.CustomeControls"
+        x:Class="SAR_Resid__Beta_Version_3_.View.Windows.MainWindow"
+        mc:Ignorable="d"
+        Title="SAR Resid"
+        Height="720"
+        Width="1100"
+        MinHeight="720"
+        MinWidth="1100"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        Background="Transparent"
+        ResizeMode="CanMinimize" 
+        Icon="/View/Windows/Appicon.jpg">
+    <Border x:Name="BDRMain">
+        <Border.Style>
+            <Style TargetType="{x:Type Border}">
+                <Setter Property="CornerRadius" Value="25"/>
+                <Setter Property="BorderThickness" Value="2.5"/>
+                <Setter Property="Background" Value="{DynamicResource ApplicationBackgroundColor}"/>
+                <Setter Property="BorderBrush">
+                    <Setter.Value>
+                        <LinearGradientBrush StartPoint="0 1" EndPoint="1 0">
+                            <GradientStop Color="Red" Offset="0"/>
+                            <GradientStop Color="Green" Offset="0.3"/>
+                            <GradientStop Color="DarkViolet" Offset="0.7"/>
+                            <GradientStop Color="Blue" Offset="1"/>
+                        </LinearGradientBrush>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Border.Style>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border x:Name="BDRRibbon" Background="#0C000000" Grid.Column="1" Grid.Row="0" CornerRadius="0 25 0 0" MouseDown="AppHeader_MouseDown">
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="BTNAdd" Style="{DynamicResource RibbonBTNStyle}" Content="Add" Margin="20 0 0 0" Visibility="Visible" Click="BTNAdd_Click"/>
+                    <Button x:Name="BTNFilter" Style="{DynamicResource RibbonBTNStyle}" Content="Filter" Margin="0 0 0 0" Visibility="Visible"/>
+                    <Button x:Name="BTNPrint" Style="{DynamicResource RibbonBTNStyle}" Content="Print" Margin="0 0 0 0" Visibility="Visible"/>
+                    <Button x:Name="BTNRefresh" Style="{DynamicResource RibbonBTNStyle}" Content="Refresh" Margin="0 0 0 0" Visibility="Visible"/>
+                    <Button x:Name="BTNTools" Style="{DynamicResource RibbonBTNStyle}" Content="Tools" Margin="20 0 0 0" Visibility="Collapsed"/>
+                    <Button x:Name="BTNDonate" Style="{DynamicResource RibbonBTNStyle}" Content="Donate" Margin="0 0 0 0" Visibility="Collapsed"/>
+                    <Button x:Name="BTNAbout" Style="{DynamicResource RibbonBTNStyle}" Content="About" Margin="0 0 0 0" Visibility="Collapsed"/>
+                    <Button x:Name="BTNUpdates" Style="{DynamicResource RibbonBTNStyle}" Content="Updates" Margin="0 0 0 0" Visibility="Collapsed"/>
+                </StackPanel>
+            </Border>
+            <Border x:Name="BDRMenu" Background="#3C000000" CornerRadius="25 0 0 25" Grid.RowSpan="2">
+                <Grid>
+                    <StackPanel Orientation="Horizontal" Margin="24 24 0 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                        <Button x:Name="BTNExit" Style="{DynamicResource ControlBoxBTNStyle(Exit)}" Click="BTNExit_Click"/>
+                        <Button x:Name="BTNMinimize" Style="{DynamicResource ControlBoxBTNStyle(Minimize)}" Margin="4 0 0 0" Click="BTNMinimize_Click"/>
+                        <Button x:Name="BTNMaximize" Style="{DynamicResource ControlBoxBTNStyle(Maximize)}" Margin="4 0 0 0" Click="BTNMaximize_Click"/>
+                    </StackPanel>
+                    <StackPanel Margin="0 90 0 0" Orientation="Vertical">
+                        <Button Content="Home" Style="{DynamicResource MenuBTNStyle}" x:Name="BTNHome" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 25" Click="BTNHome_Selected"/>
+                        <Button Content="Customers" Style="{DynamicResource MenuBTNStyle}" x:Name="BTNCustomers" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 25" Click="BTNCustomers_Selected"/>
+                        <Button Content="Bills" Style="{DynamicResource MenuBTNStyle}" x:Name="BTNBills" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 25" Click="BTNBills_Selected"/>
+                        <Button Content="WorkSheets" Style="{DynamicResource MenuBTNStyle}" x:Name="BTNWorkSheets" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 25" Click="BTNWorkSheets_Selected"/>
+                    </StackPanel>
+                    <Button Content="Settings" Style="{DynamicResource MenuBTNStyle}" x:Name="BTNSettings" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 25" Padding="10 12 0 0" Click="BTNSettings_Selected"/>
+                </Grid>
+            </Border>
+            <Border x:Name="BDRContent" Grid.Row="1" Grid.Column="1" Background="#0C000000">
+                <Border Background="{DynamicResource CCColor}" CornerRadius="25 0 25 0">
+                    <Grid>
+                        <Frame x:Name="PageManager" NavigationUIVisibility="Hidden"/>
+                    </Grid>
+                </Border>
+            </Border>
+        </Grid>
+    </Border>
+</Window>

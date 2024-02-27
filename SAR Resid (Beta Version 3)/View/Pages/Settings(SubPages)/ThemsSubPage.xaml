@@ -1,0 +1,20 @@
+﻿<Page x:Class="SAR_Resid__Beta_Version_3_.View.Pages.Settings_SubPages_.ThemsSubPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SAR_Resid__Beta_Version_3_.View.Pages.Settings_SubPages_"
+      xmlns:UC="clr-namespace:SAR_Resid__Beta_Version_3_.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ThemsSubPage">
+
+    <Grid>
+        <StackPanel x:Name="STPThem" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Visible">
+            <StackPanel Orientation="Horizontal">
+                <UC:DarkThemeBox Margin="0 0 10 0"/>
+                <UC:LightThemeBox/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

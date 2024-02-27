@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SAR Resid (Beta Version 3)", "SAR Resid (Beta Version 3)\SAR Resid (Beta Version 3).csproj", "{7EDB76AA-25CF-4BB0-A8D2-76D3A29335DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SAR Resid (Console Edition)", "SAR Resid (Console Edition)\SAR Resid (Console Edition).csproj", "{A9E424B0-AD54-49C0-9290-BB7145AFF36C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7EDB76AA-25CF-4BB0-A8D2-76D3A29335DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EDB76AA-25CF-4BB0-A8D2-76D3A29335DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EDB76AA-25CF-4BB0-A8D2-76D3A29335DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EDB76AA-25CF-4BB0-A8D2-76D3A29335DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E424B0-AD54-49C0-9290-BB7145AFF36C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E424B0-AD54-49C0-9290-BB7145AFF36C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E424B0-AD54-49C0-9290-BB7145AFF36C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E424B0-AD54-49C0-9290-BB7145AFF36C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C6378ED3-10EE-4ABD-8EB9-D2F2A72281D9}
+	EndGlobalSection
+EndGlobal
