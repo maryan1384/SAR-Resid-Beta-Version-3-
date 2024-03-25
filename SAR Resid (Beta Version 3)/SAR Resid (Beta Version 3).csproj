@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="View\Pages\AddBill%28SubPages%29\" />
     <Folder Include="View\Windows\AddWindows\AddBillWindowFiles\" />
   </ItemGroup>
 
